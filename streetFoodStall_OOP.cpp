@@ -743,13 +743,10 @@ int main() {
 		        StreetFoodStall.setSquidBallAmount(squidBallPieces, squidBallPrice);
 		        StreetFoodStall.setKwekKwekAmount(kwekKwekPieces, kwekKwekPrice);
 		        fishBallAmount = StreetFoodStall.getFishBallAmount();
-		        cout << fishBallAmount << endl;
 		        squidBallAmount = StreetFoodStall.getSquidBallAmount();
-		        cout << squidBallAmount << endl;
 		        kwekKwekAmount = StreetFoodStall.getKwekKwekAmount();
-		        cout << kwekKwekAmount << endl;
 		        // Store the calculated amount to amount
-		        amount = fishBallPrice + squidBallAmount + kwekKwekAmount;
+		        amount = fishBallAmount + squidBallAmount + kwekKwekAmount;
 		        cout << "Amount: " << amount << endl;
 		        cout << "VAT: " << amount * vat << endl;
 		        // Calculate Total Amount
