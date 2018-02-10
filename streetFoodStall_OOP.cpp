@@ -9,7 +9,7 @@ class FoodStall {
 		// Public Attributes
 		float bill;
 		float change;
-		float vat = .12;
+		const static float vat = .12;
 		float amount;
 		float totalAmount;
 
@@ -20,7 +20,7 @@ class FoodStall {
 			cout << "NAME: DAZA, VINCENT LEROY M." << endl;
 			cout << "SECTION: 4BSIT8A" << endl;
 		}
-		int foodStallHeader(){
+		void foodStallHeader(){
 			cout << "=============================================" << endl;
 			cout << "==== INTEGRATIVE PROGRAMMING C++ PROJECT ====" << endl;
 			cout << "=============================================" << endl;
@@ -94,13 +94,13 @@ class FoodStall {
 		float getChange() {
 			return this->change;
 		}
-		
+
 		// Destructor
 		~FoodStall(){}
 	private:
 		// Private Attributes
 		string title;
-		
+
 };
 
 /* BASE CLASS 2 SingleOrder */
@@ -156,17 +156,17 @@ class MultipleOrder {
 	    float fishBallPrice;
 		int fishBallPieces;
 	    float fishBallAmount;
-	    float fishBallTotalAmount;
+	    float fishBallTotalAmount = 0;
 	    /* Squidball */
 	    float squidBallPrice;
 		int squidBallPieces;
 	    float squidBallAmount;
-	    float squidBallTotalAmount;
+	    float squidBallTotalAmount = 0;
 	    /* KwekKwek */
 	    float kwekKwekPrice;
 		int kwekKwekPieces;
 	    float kwekKwekAmount;
-	    float kwekKwekTotalAmount;
+	    float kwekKwekTotalAmount = 0;
 	    /* ----------------------- */
 
 	    // Setters
@@ -357,17 +357,17 @@ int main() {
 	    float fishBallPrice;
 		int fishBallPieces;
 	    float fishBallAmount;
-	    float fishBallTotalAmount;
+	    float fishBallTotalAmount = 0;
 	    /* Squidball */
 	    float squidBallPrice;
 		int squidBallPieces;
 	    float squidBallAmount;
-	    float squidBallTotalAmount;
+	    float squidBallTotalAmount = 0;
 	    /* KwekKwek */
 	    float kwekKwekPrice;
 		int kwekKwekPieces;
 	    float kwekKwekAmount;
-	    float kwekKwekTotalAmount;
+	    float kwekKwekTotalAmount = 0;
 	    /* ----------------------- */
 
 
@@ -551,9 +551,7 @@ int main() {
 		        StreetFoodStall.setFishBallAmount(fishBallPieces, fishBallPrice);
 		        StreetFoodStall.setSquidBallAmount(squidBallPieces, squidBallPrice);
 		        fishBallAmount = StreetFoodStall.getFishBallAmount();
-		        cout << fishBallAmount << endl;
 		        squidBallAmount = StreetFoodStall.getSquidBallAmount();
-				cout << squidBallAmount << endl;
 		        // Store the calculated amount to amount
 		        amount = fishBallAmount + squidBallAmount;
 		        cout << "Amount: " << amount << endl;
@@ -777,7 +775,7 @@ int main() {
 		        cout << "It seems your choice is not listed from the menu." << endl;
 	    	break;
 		}
-        
+
 		bool exitLooper = true;
 		while(exitLooper) {
 			char choice;
